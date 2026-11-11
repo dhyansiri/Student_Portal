@@ -16,7 +16,7 @@ router.get('/health', (req, res) => {
     timestamp: new Date().toISOString(),
     service: 'Presidency University CampusBuddy AI Helpdesk',
     backend: 'Node.js Express',
-    aiModel: process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite',
+    aiModel: process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite',
     aiConfigured: geminiConfigured,
     embeddingService: {
       model: storeMeta.embeddingModel || 'local-hash-v1',

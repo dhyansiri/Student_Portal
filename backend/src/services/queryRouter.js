@@ -4,9 +4,12 @@
  * to one of Presidency University's primary knowledge categories.
  */
 
-const GREETING_ONLY = /^(hi|hii|hiii|hello|hey|heyy|namaste|good\s+(morning|afternoon|evening)|howdy|yo|sup)\s*[!.?,]*$/i;
-const THANKS = /^(thanks|thank\s*you|thx|ty|great thanks|okay thanks|ok thanks|many thanks)\s*[!.?,]*$/i;
-const CASUAL = /^(who\s+are\s+you|what\s+can\s+you\s+do|help|help\s+me|what\s+do\s+you\s+do|how\s+are\s+you|how\s+r\s+u|nice|cool|okay|ok)\s*[!.?,]*$/i;
+const CASUAL_PATTERNS = [
+  /^(hi|hii|hiii|hello|hey|heyy|namaste|good\s+(morning|afternoon|evening)|howdy|yo|sup)\s*[!.?,]*$/i,
+  /^(thanks|thank\s*you|thx|ty|great thanks|okay thanks|ok thanks|many thanks)\s*[!.?,]*$/i,
+  /^(who\s+are\s+you|what\s+can\s+you\s+do|help|help\s+me|what\s+do\s+you\s+do|how\s+are\s+you|how\s+r\s+u|nice|cool|okay|ok)\s*[!.?,]*$/i,
+  /^(hi|hello|hey)\s*[,!.]*\s*(who\s+are\s+you|what\s+can\s+you\s+do|how\s+are\s+you|what\s+do\s+you\s+do)\s*[!.?,]*$/i
+];
 
 const CATEGORY_PATTERNS = {
   academics: /\b(academic|academics|faculty\s+advisor|advisor|professor|course|subject|curriculum|syllabus|study|studies|cgpa|gpa|grades?|marks?)\b/i,
@@ -22,7 +25,7 @@ const CATEGORY_PATTERNS = {
 export function isGreetingOrCasual(text) {
   const q = String(text || '').trim();
   if (!q) return false;
-  return GREETING_ONLY.test(q) || THANKS.test(q) || CASUAL.test(q);
+  return CASUAL_PATTERNS.some(p => p.test(q));
 }
 
 export function detectCampusCategory(query, conversationHistory = []) {

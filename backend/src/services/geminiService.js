@@ -79,7 +79,7 @@ async function callGeminiApi({ apiKey, modelName, systemInstruction, contents, t
  */
 export async function generateCasualResponse({ query, conversationHistory = [] }) {
   const apiKey = process.env.GEMINI_API_KEY;
-  const modelName = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+  const modelName = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
   if (!apiKey || !apiKey.trim()) {
     // If no API key configured, provide clean deterministic campus greeting
@@ -118,7 +118,7 @@ export async function generateCasualResponse({ query, conversationHistory = [] }
  */
 export async function generateCampusAnswer({ query, retrievedDocuments = [], conversationHistory = [] }) {
   const apiKey = process.env.GEMINI_API_KEY;
-  const modelName = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+  const modelName = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 
   // Format retrieved documents into clean context blocks
   const contextBlocks = retrievedDocuments.map((doc, idx) => {
