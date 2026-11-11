@@ -14,7 +14,7 @@ RUN npm run build
 FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-ENV PORT=5000
+ENV PORT=8080
 
 # Install production backend dependencies
 COPY package.json ./
@@ -31,11 +31,11 @@ COPY --from=frontend-builder /app/frontend/dist frontend/dist
 RUN node backend/src/scripts/build-campus-index.js
 
 # Expose server port
-EXPOSE 5000
-
+EXPOSE 8080
+ 
 # Health check
 HEALTHCHECK --interval=30s --timeout=5s --start-period=5s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost:5000/api/health || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost:8080/api/health || exit 1
 
 # Start CampusBuddy Helpdesk server
 CMD ["node", "backend/src/server.js"]

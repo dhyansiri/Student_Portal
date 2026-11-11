@@ -104,7 +104,7 @@ Fill in your Google Gemini API Key:
 ```env
 GEMINI_API_KEY=your_actual_gemini_api_key_here
 GEMINI_MODEL=gemini-2.5-flash-lite
-PORT=5000
+PORT=8080
 ```
 *(Note: If `GEMINI_API_KEY` is omitted, CampusBuddy AI automatically runs in verified offline mode, directly serving grounded knowledge extracts without crashing!)*
 
@@ -129,7 +129,7 @@ npm run build:frontend
 ```bash
 npm start
 ```
-Open **[http://localhost:5000](http://localhost:5000)** in your browser!
+Open **[http://localhost:8080](http://localhost:8080)** in your browser!
 
 ---
 
@@ -165,9 +165,9 @@ Build and run using the optimized multi-stage container:
 docker build -t campusbuddy-ai .
 
 # Run Docker container
-docker run --rm -p 5000:5000 --env-file .env campusbuddy-ai
+docker run --rm -p 8080:8080 --env-file .env campusbuddy-ai
 ```
-Visit `http://localhost:5000` to interact with the containerized application.
+Visit `http://localhost:8080` to interact with the containerized application.
 
 ---
 
