@@ -1,0 +1,22 @@
+{
+  "name": "campusbuddy-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Presidency University AI Campus Helpdesk built for TECHNOPIA 2.0",
+  "scripts": {
+    "start": "node backend/src/server.js",
+    "dev": "node backend/src/server.js",
+    "build:frontend": "cd frontend && vite build",
+    "build:index": "node backend/src/scripts/build-campus-index.js",
+    "build": "npm run build:index && npm run build:frontend",
+    "test": "node backend/test/rag-quality.test.js && node backend/test/in-process-api.test.js",
+    "test:rag": "node backend/test/rag-quality.test.js",
+    "test:api": "node backend/test/in-process-api.test.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

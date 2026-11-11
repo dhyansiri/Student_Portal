@@ -1,0 +1,66 @@
+[
+  {
+    "id": "academics_001",
+    "category": "academics",
+    "title": "Academic Assistance",
+    "content": "Students may contact their faculty advisor for academic-related assistance.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["academics", "academic problems", "faculty advisor", "academic assistance", "advisor", "courses", "grades"]
+  },
+  {
+    "id": "attendance_001",
+    "category": "attendance",
+    "title": "Attendance Requirement",
+    "content": "Students should follow the minimum attendance requirement prescribed by university regulations. The exact percentage is not specified in the supplied sample information.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["attendance", "minimum attendance", "attendance percentage", "shortage", "eligibility"]
+  },
+  {
+    "id": "examinations_001",
+    "category": "examinations",
+    "title": "Examination Timetables and Notifications",
+    "content": "Examination timetables and notifications are published through official university channels. The exact date of a student's next examination is not specified in the supplied sample information.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["examination", "exam", "timetable", "schedule", "notifications", "next exam", "hall ticket", "date sheet"]
+  },
+  {
+    "id": "placements_001",
+    "category": "placements",
+    "title": "Placement Training and Information",
+    "content": "Students may contact the Placement Department for training and placement-related information.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["placements", "placement training", "career", "recruitment", "placement department", "internship", "jobs"]
+  },
+  {
+    "id": "library_001",
+    "category": "library",
+    "title": "Library Resources and Access",
+    "content": "Students may access library resources according to the library's timings and regulations. The actual timings are not specified in the supplied sample information.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["library", "books", "resources", "library timings", "library rules", "borrowing", "reading room"]
+  },
+  {
+    "id": "hostel_001",
+    "category": "hostel",
+    "title": "Hostel Complaints",
+    "content": "Hostel-related complaints should be submitted to the Hostel Administration.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["hostel", "hostel complaint", "hostel issue", "accommodation", "hostel administration", "warden", "room"]
+  },
+  {
+    "id": "administration_001",
+    "category": "administration",
+    "title": "Certificates and Student Records",
+    "content": "Students may contact the respective administrative office for certificates and student records.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["administration", "certificate", "student records", "documents", "administrative office", "transcript", "bonafide"]
+  },
+  {
+    "id": "events_001",
+    "category": "events",
+    "title": "University Events",
+    "content": "University event announcements are shared through official communication channels.",
+    "source": "TECHNOPIA 2.0 sample university information",
+    "tags": ["events", "announcements", "university events", "fest", "activities", "seminar", "workshop"]
+  }
+]

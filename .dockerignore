@@ -1,0 +1,16 @@
+.git
+.gitignore
+.DS_Store
+node_modules
+*/node_modules
+.env
+.env.*
+!.env.example
+*.log
+*.zip
+rag_sih
+rag_sih.zip
+__MACOSX
+dist
+frontend/dist
+scratch
